@@ -21,6 +21,7 @@ const MenuExtraction = ({ onExtractedNodes }) => {
         const [id, ...label] = item.split('. ');
         return {
           id,
+          
           data: { label: label.join('. ') },
           position: { x: index * 100, y: index * 100 },
         };
@@ -40,7 +41,7 @@ const MenuExtraction = ({ onExtractedNodes }) => {
         className='border w-full p-2'
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
-        placeholder="Paste text containing menu structures here..."
+        placeholder="Text containing menu structures here... (format example = 1. MenuItem )"
         rows={10}
       />
       <br />
@@ -56,7 +57,7 @@ const MenuExtraction = ({ onExtractedNodes }) => {
           </ul>
         </div>
       ) : (
-        <p>{errorMessage}</p>
+        <p className="text-[red] text-xs">{errorMessage}</p>
       )}
     </div>
   );

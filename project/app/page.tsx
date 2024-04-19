@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       {/* Main area with ReactFlowGraph component */}
       <div className="w-[80%]">
-        <ReactFlowGraph nodes={extractedNodes} />
+        <ReactFlowGraph initialNodes={extractedNodes} />
       </div>
     </main>
   );
