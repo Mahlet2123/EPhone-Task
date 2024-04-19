@@ -4,7 +4,7 @@ import React, { useCallback, useState } from 'react';
 import ReactFlow, { MiniMap, Controls, Background, useEdgesState, useNodesState, addEdge, Connection, Edge } from 'reactflow';
 import 'reactflow/dist/style.css';
 
-const ReactFlowGraph = ({ initialNodes }) => {
+const ReactFlowGraph = ({ initialNodes }: any) => {
   const [nodesState, setNodesState, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 

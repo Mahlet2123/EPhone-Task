@@ -1,7 +1,8 @@
 "use client";
 import { useState } from 'react';
 
-const MenuExtraction = ({ onExtractedNodes }) => {
+
+const MenuExtraction = ({ onExtractedNodes }: any) => {
   const [inputText, setInputText] = useState('');
   const [menuItems, setMenuItems] = useState<string[]>([]);
   const [errorMessage, setErrorMessage] = useState('');
